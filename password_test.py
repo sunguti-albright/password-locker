@@ -78,17 +78,17 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(Credentials.credentials_list),2)
     #The end!
 
-    # def test_delete_credentials(self):
-    #     '''
-    #     test_delete_credentials test case to test if we can remove a credential
-    #     '''
-    #     self.new_credential.save_credentials()
-    #     test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
-    #     test_credential.save_credentials()
+    def test_delete_credentials(self):
+        '''
+        test_delete_credentials test case to test if we can remove a credential
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
         
-    #     self.new_credential.delete_credentials()
-    #     self.assertEqual(len(Credentials.credentials_list),1)
-    # #The end!
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+    #The end!
 
     # def test_find_credentials(self):
     #     '''
