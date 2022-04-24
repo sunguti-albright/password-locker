@@ -90,36 +90,36 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(Credentials.credentials_list),1)
     #The end!
 
-    # def test_find_credentials(self):
-    #     '''
-    #     test_find_credentials test case to test if we can find credentials and display the information
-    #     '''
-    #     self.new_credential.save_credentials()
-    #     test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
-    #     test_credential.save_credentials()
+    def test_find_credentials(self):
+        '''
+        test_find_credentials test case to test if we can find credentials and display the information
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
 
-    #     found_credentials = Credentials.find_credentials('Gmail')
-    #     self.assertEqual(found_credentials.platform,test_credential.platform)
-    # #The end!
+        found_credentials = Credentials.find_credentials('Gmail')
+        self.assertEqual(found_credentials.platform,test_credential.platform)
+    #The end!
 
-    # def test_credential_exists(self):
-    #     '''
-    #     test_credential_exists test case to test if credentials exists to get True and false otherwise
-    #     '''
-    #     self.new_credential.save_credentials()
-    #     test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
-    #     test_credential.save_credentials()
+    def test_credential_exists(self):
+        '''
+        test_credential_exists test case to test if credentials exists to get True and false otherwise
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
 
-    #     found_credential_exists = Credentials.credential_exists('Gmail')
-    #     self.assertTrue(found_credential_exists)
-    # #The end!
+        found_credential_exists = Credentials.credential_exists('Gmail')
+        self.assertTrue(found_credential_exists)
+    #The end!
 
-    # def test_display_all_credentials(self):
-    #     '''
-    #     test_display_all_credentials test case to test if all credentials can be displayed
-    #     '''
-    #     self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
-    # #The end!
+    def test_display_all_credentials(self):
+        '''
+        test_display_all_credentials test case to test if all credentials can be displayed
+        '''
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+    #The end!
 
 
 if __name__ == '__main__':
