@@ -67,16 +67,16 @@ class TestCredentials(unittest.TestCase):
         Credentials.credentials_list = []
     #The end!
 
-    # def test_save_multiple_credentials(self):
-    #     '''
-    #     test_save_many_credentials test case to test if we can save multiple credentials at a time
-    #     '''
-    #     self.new_credential.save_credentials()
-    #     test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
-    #     test_credential.save_credentials()
+    def test_save_multiple_credentials(self):
+        '''
+        test_save_many_credentials test case to test if we can save multiple credentials at a time
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
 
-    #     self.assertEqual(len(Credentials.credentials_list),2)
-    # #The end!
+        self.assertEqual(len(Credentials.credentials_list),2)
+    #The end!
 
     # def test_delete_credentials(self):
     #     '''
