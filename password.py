@@ -7,7 +7,7 @@ class User:
     Initiates new instances of a user
     """
     
-#     user_list = []
+    user_list = []
 
 #     def __init__(self, user_name, password):
 #         """
