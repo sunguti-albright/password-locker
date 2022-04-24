@@ -52,31 +52,31 @@ def __init__(self,platform,email,password):
          self.platform = platform
          self.email = email
          self.password = password
-  #The End!
+     #The End!
 
-#     def save_credentials(self):
-#         '''
-#         save_credentials class to save and store new credentials into credentials_list
-#         '''
-#         Credentials.credentials_list.append(self)
-#     #The end!
-    
-#     def delete_credentials(self):
-#         '''
-#         delete_credentials class to remove credential ffrom credentials_list
-#         '''
-#         Credentials.credentials_list.remove(self)
-#     #The end!
+def save_credentials(self):
+    '''
+    save_credentials class to save and store new credentials into credentials_list
+    '''
+    Credentials.credentials_list.append(self)
+#The end!
 
-#     @classmethod
-#     def find_credentials(cls, platform):
-#         '''
-#         find_credentials class to find credentials and display their information
-#         '''
-#         for crede in cls.credentials_list:
-#             if crede.platform == platform:
-#                 return crede
-#     #The end!
+def delete_credentials(self):
+    '''
+    delete_credentials class to remove credential ffrom credentials_list
+    '''
+    Credentials.credentials_list.remove(self)
+#The end!
+
+@classmethod
+def find_credentials(cls, platform):
+    '''
+    find_credentials class to find credentials and display their information
+    '''
+    for crede in cls.credentials_list:
+        if crede.platform == platform:
+            return crede
+#The end!
 
 #     @classmethod
 #     def credential_exists(cls, platform):
