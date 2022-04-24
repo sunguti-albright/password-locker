@@ -97,23 +97,23 @@ def find_credentials(cls, platform):
         return cls.credentials_list
     #The end!
 
-#     def new_password(stringLength = 10):
-#         '''
-#         new_password method to generate a new password
-#         '''
-#         password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
-#         return ''.join(random.choice(password) for i in range(stringLength))
-#     #The end!
+    def new_password(stringLength = 10):
+        '''
+        new_password method to generate a new password
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+        return ''.join(random.choice(password) for i in range(stringLength))
+    #The end!
 
-#     @classmethod
-#     def copy_credentials(cls,platform):
-#         '''
-#         copy_credentials class to be able to copy credentials to the clipboard
-#         '''
-#         found_credentials = Credentials.find_credentials('Gmail')
-#         pyperclip.copy(found_credentials.platform)
-#     #The end!
-# #The End of Credentials class
+    @classmethod
+    def copy_credentials(cls,platform):
+        '''
+        copy_credentials class to be able to copy credentials to the clipboard
+        '''
+        found_credentials = Credentials.find_credentials('Gmail')
+        pyperclip.copy(found_credentials.platform)
+    #The end!
+#The End of Credentials class
 
 
     
