@@ -1,5 +1,3 @@
-    
-
 import unittest # Importing unittest module
 from password import User # Importing user class from password module
 from password import Credentials #Importing credentials class from password module
@@ -19,7 +17,7 @@ class TestUser(unittest.TestCase):
         '''
         test_init to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.username,'ALbright')
+        self.assertEqual(self.new_user.username,'Albright')
         self.assertEqual(self.new_user.password,'yeswecan')
     #The End!
     
@@ -72,7 +70,7 @@ class TestCredentials(unittest.TestCase):
         test_save_many_credentials test case to test if we can save multiple credentials at a time
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential = Credentials('Instagram','test.user@gmail.com','yesyes')
         test_credential.save_credentials()
 
         self.assertEqual(len(Credentials.credentials_list),2)
@@ -83,7 +81,7 @@ class TestCredentials(unittest.TestCase):
         test_delete_credentials test case to test if we can remove a credential
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential = Credentials('Instagram','test.user@gmail.com','yesyes')
         test_credential.save_credentials()
         
         self.new_credential.delete_credentials()
@@ -95,7 +93,7 @@ class TestCredentials(unittest.TestCase):
         test_find_credentials test case to test if we can find credentials and display the information
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential = Credentials('Instagram','test.user@gmail.com','yesyes')
         test_credential.save_credentials()
 
         found_credentials = Credentials.find_credentials('Gmail')
@@ -107,7 +105,7 @@ class TestCredentials(unittest.TestCase):
         test_credential_exists test case to test if credentials exists to get True and false otherwise
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential = Credentials('Instagram','test.user@gmail.com','yesyes')
         test_credential.save_credentials()
 
         found_credential_exists = Credentials.credential_exists('Gmail')
