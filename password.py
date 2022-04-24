@@ -78,24 +78,24 @@ def find_credentials(cls, platform):
             return crede
 #The end!
 
-#     @classmethod
-#     def credential_exists(cls, platform):
-#         '''
-#         credential_exists class to check if credentials already exists
-#         '''
-#         for crede in cls.credentials_list:
-#             if crede.platform == platform:
-#                 return True
-#         return False
-#     #The end!
+    @classmethod
+    def credential_exists(cls, platform):
+        '''
+        credential_exists class to check if credentials already exists
+        '''
+        for crede in cls.credentials_list:
+            if crede.platform == platform:
+                return True
+        return False
+    #The end!
 
-#     @classmethod
-#     def display_credentials(cls):
-#         '''
-#         display_credentials class to display credentials from credentials_list
-#         '''
-#         return cls.credentials_list
-#     #The end!
+    @classmethod
+    def display_credentials(cls):
+        '''
+        display_credentials class to display credentials from credentials_list
+        '''
+        return cls.credentials_list
+    #The end!
 
 #     def new_password(stringLength = 10):
 #         '''
