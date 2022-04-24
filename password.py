@@ -2,10 +2,10 @@ import pyperclip
 import random
 import string
 
-# class User:
-#     """
-#     Initiates new instances of a user
-#     """
+class User:
+    """
+    Initiates new instances of a user
+    """
     
 #     user_list = []
 
