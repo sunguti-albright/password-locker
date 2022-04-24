@@ -20,4 +20,18 @@ class User:
         """Saves the user"""
         User.user_list.append(self)
 
-
+    @classmethod
+    def display_user(cls):
+        """Displays the user"""
+        return cls.user_list
+    def delete_user(self):
+        """Deletes the user"""
+        User.user_list.remove(self)
+    @classmethod
+    def find_by_name(name, password):
+        """Finds the user by name"""
+        find_user = ""
+        for user in User.user_list:
+            if user.user_name == name and user.password == password:
+                find_user = user.username
+        return find_user
